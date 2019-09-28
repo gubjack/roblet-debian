@@ -1,4 +1,0 @@
-#!/bin/bash -xe
-G=roblet
-delgroup --system $G
-
