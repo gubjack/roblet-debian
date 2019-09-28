@@ -6,6 +6,33 @@
 
     <groupId>org.roblet</groupId>
     <artifactId>roblet-debian</artifactId>
-    <version>0.0.0-SNAPSHOT</version>
+    <version>0-SNAPSHOT</version>
+
+    <build>
+
+        <plugins>
+
+            <!-- jdeb - Debian package creation -->
+            <plugin>
+                <groupId>org.vafer</groupId>
+                <artifactId>jdeb</artifactId>
+                <version>1.8</version>
+                <!-- last checked 2019-09-28
+                    https://search.maven.org/search?q=jdeb
+                    https://github.com/tcurdt/jdeb
+                -->
+
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jdeb</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+
+    </build>
 
 </project>

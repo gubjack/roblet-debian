@@ -1,0 +1,9 @@
+Package: roblet
+Version: [[version]]
+Section: misc
+Priority: none
+Architecture: all
+Maintainer: Hagen Stanek, roblet.org <stanek@roblet.org>
+Description: roblet server
+ This is the base server for roblets.
+ No additional modules are included.
