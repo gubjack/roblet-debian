@@ -8,31 +8,16 @@
     <artifactId>roblet-debian</artifactId>
     <version>0-SNAPSHOT</version>
 
+    <packaging>deb</packaging>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
-
-        <plugins>
-
-            <!-- Apache JAR plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
-                <!-- last checked 2019-09-28
-                    https://maven.apache.org/plugins/maven-jar-plugin
-                -->
-
-                <configuration>
-                    <!-- We have no Java sources and do not build a JAR -->
-                    <skipIfEmpty>true</skipIfEmpty>
-                </configuration>
-            </plugin>
-
-            <!-- jdeb - Debian package creation -->
-            <plugin>
+        <extensions>
+            <!-- Add support for the "deb" packaging -->
+            <extension>
                 <groupId>org.vafer</groupId>
                 <artifactId>jdeb</artifactId>
                 <version>1.8</version>
@@ -40,18 +25,8 @@
                     https://search.maven.org/search?q=jdeb
                     https://github.com/tcurdt/jdeb
                 -->
-
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>jdeb</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
-
+            </extension>
+        </extensions>
     </build>
 
 </project>
