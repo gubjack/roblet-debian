@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 G=roblet
 U=roblet
-D=roblet server
+D="roblet server"
 addgroup --system  $G
 adduser --system --ingroup $G --no-create-home --gecos "$D"  $U
