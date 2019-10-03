@@ -1,0 +1,12 @@
+[Unit]
+Description=roblet server
+After=syslog.target
+
+[Service]
+User=roblet
+SyslogIdentifier=roblet
+Nice=10
+ExecStart=/opt/roblet/roblet
+
+[Install]
+WantedBy=multi-user.target
