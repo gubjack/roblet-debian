@@ -1,5 +1,5 @@
 #!/bin/bash -xe
-echo ROBLET
-echo ROBLET ERROR > /dev/stderr
 echo USER $USER
 echo HOME $HOME
+echo ROBLET
+echo ROBLET ERROR 1>&2
