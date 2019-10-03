@@ -4,3 +4,6 @@ U=roblet
 D="roblet server"
 addgroup --system  $G
 adduser --system --ingroup $G --no-create-home --gecos "$D"  $U
+systemctl link /opt/roblet/roblet.service
+systemctl enable roblet
+systemctl restart roblet
