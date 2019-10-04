@@ -1,5 +1,5 @@
 #!/bin/bash -xe
-echo USER $USER
-echo HOME $HOME
-echo ROBLET
-echo ROBLET ERROR 1>&2
+cd /opt/roblet
+CP=.
+for F in $(ls *.jar); do CP=$CP:$F; done
+java -cp $CP org.roblet.server.Main
