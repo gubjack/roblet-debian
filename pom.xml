@@ -30,13 +30,17 @@
 
         <pluginManagement>
             <plugins>
+
                 <!-- jdeb configuration -->
                 <plugin>
                     <artifactId>jdeb</artifactId>
                     <groupId>org.vafer</groupId>
+
                     <!-- Customize deb package -->
                     <configuration>
                         <dataSet>
+
+                            <!-- /opt/roblet/roblet -->
                             <data>
                                 <src>src/deb/roblet</src>
                                 <type>file</type>
@@ -46,6 +50,8 @@
                                     <filemode>755</filemode>
                                 </mapper>
                             </data>
+
+                            <!-- /opt/roblet/roblet.service -->
                             <data>
                                 <src>src/deb/roblet.service</src>
                                 <type>file</type>
@@ -54,6 +60,7 @@
                         </dataSet>
                     </configuration>
                 </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
