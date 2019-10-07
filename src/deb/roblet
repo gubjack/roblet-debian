@@ -1,4 +1,6 @@
 #!/bin/bash -xe
+# SPDX-License-Identifier: LGPL-2.1-only
+
 cd /opt/roblet
 CP=.
 for F in $(ls *.jar); do CP=$CP:$F; done

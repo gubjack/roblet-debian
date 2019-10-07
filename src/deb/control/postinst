@@ -1,4 +1,6 @@
 #!/bin/bash -xe
+# SPDX-License-Identifier: LGPL-2.1-only
+
 G=roblet
 U=roblet
 D="roblet server"
