@@ -53,6 +53,14 @@
                     <configuration>
                         <dataSet>
 
+                            <!-- /etc/roblet/ -->
+                            <data>
+                                <type>template</type>
+                                <paths>
+                                    <path>/etc/roblet</path>
+                                </paths>
+                            </data>
+
                             <!-- /opt/roblet/roblet -->
                             <data>
                                 <src>src/deb/roblet</src>

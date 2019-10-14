@@ -1,7 +1,38 @@
 #!/bin/bash -xe
 # SPDX-License-Identifier: LGPL-2.1-only
 
+function readmodule {
+    echo read $1
+    exec 3< $1
+
+    local V
+    read V <&3
+    if [[ $V > 0 ]]; then
+        echo Only version 0 supported
+        exit 1
+    fi
+
+    local MR
+    read MR <&3
+    M=$M" "$MR
+
+    local P
+    read P <&3
+    local F
+    for F in $(ls $P/*.jar); do J=$J":"$F; done
+
+    local DR
+    read DR <&3
+    D=$D" "$DR
+
+    exec 3>&-
+}
+E=/etc/roblet
+for F in $(ls $E); do readmodule $E/$F; done
+
 cd /opt/roblet
+
 CP=.
 for F in $(ls *.jar); do CP=$CP:$F; done
-java -cp $CP org.roblet.server.Main
+
+java $D -cp $CP$J org.roblet.server.Main $M
