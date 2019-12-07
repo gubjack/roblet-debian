@@ -2,5 +2,5 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://github.com/gubjack/roblet-debian
 
 Files: *
-Copyright: 2019 Hagen Stanek <stanek@roblet.org>
+Copyright: Hagen Stanek <stanek@roblet.org>
 License: LGPL-2.1
