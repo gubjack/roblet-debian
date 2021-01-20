@@ -15,7 +15,25 @@
 
 
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!--
+            For details regarding the version conventions consult the
+            'Debian Policy Manual - Control files and their fields'.
+        -->
+
+        <!-- This is refers to the software being packaged. -->
+        <upstream.version>2.0</upstream.version>
+
+        <!--
+            The packages version usually should be the upstream version.
+            But in case another package is needed for the same upstream version
+            add '-N' (hyphen N with N being an integer greater 0).
+            More on this in the manual mentioned above.
+        -->
+        <package.version>${upstream.version}</package.version>
+
     </properties>
 
 
@@ -25,7 +43,7 @@
         <dependency>
             <groupId>org.roblet</groupId>
             <artifactId>roblet-server</artifactId>
-            <version>2.0</version>
+            <version>${upstream.version}</version>
         </dependency>
 
     </dependencies>
@@ -57,7 +75,7 @@
                     <!-- Customize deb package -->
                     <configuration>
 
-                        <deb>${project.build.directory}/roblet_[[version]]_all.deb</deb>
+                        <deb>${project.build.directory}/roblet_[[package.version]]_all.deb</deb>
 
                         <dataSet>
 

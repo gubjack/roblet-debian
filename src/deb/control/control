@@ -1,5 +1,5 @@
 Package: roblet
-Version: [[version]]
+Version: [[package.version]]
 Section: misc
 Priority: none
 Architecture: all
