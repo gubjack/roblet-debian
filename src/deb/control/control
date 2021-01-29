@@ -3,7 +3,7 @@ Version: [[package.version]]
 Section: misc
 Priority: none
 Architecture: all
-Depends: default-jre-headless
+Depends: default-11-jre-headless
 Maintainer: Hagen Stanek, roblet.org <stanek@roblet.org>
 Description: roblet server
  This is the base server for roblets.
