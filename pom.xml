@@ -78,7 +78,7 @@
                     <!-- Customize deb package -->
                     <configuration>
 
-                        <deb>${project.build.directory}/roblet_[[package.version]]_all.deb</deb>
+                        <deb>target/roblet_[[package.version]]_all.deb</deb>
 
                         <dataSet>
 
