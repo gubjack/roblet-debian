@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: LGPL-2.1-only
+# (C) Copyright Hagen Stanek. All rights reserved.
 
 [Unit]
 Description=roblet server

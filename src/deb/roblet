@@ -1,5 +1,6 @@
 #!/bin/bash -xe
 # SPDX-License-Identifier: LGPL-2.1-only
+# (C) Copyright Hagen Stanek. All rights reserved.
 
 function readmodule {
     echo read $1

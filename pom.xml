@@ -1,4 +1,7 @@
-<!-- SPDX-License-Identifier: LGPL-2.1-only -->
+<!--
+    SPDX-License-Identifier: LGPL-2.1
+    (C) Copyright Hagen Stanek. All rights reserved.
+-->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
