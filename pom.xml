@@ -27,7 +27,7 @@
         -->
 
         <!-- This is refers to the software being packaged. -->
-        <upstream.version>2.0</upstream.version>
+        <upstream.version>2.0.1-SNAPSHOT</upstream.version>
 
         <!--
             The package version usually should be the upstream version.
@@ -36,6 +36,7 @@
             More on this in the manual mentioned above.
         -->
         <package.version>${upstream.version}</package.version>
+        <package.version>2.0.1~SNAPSHOT</package.version>
 
     </properties>
 
