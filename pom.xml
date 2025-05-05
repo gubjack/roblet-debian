@@ -60,11 +60,6 @@
             <extension>
                 <groupId>org.vafer</groupId>
                 <artifactId>jdeb</artifactId>
-                <version>1.8</version>
-                <!-- last checked 2019-09-28
-                    https://search.maven.org/search?q=jdeb
-                    https://github.com/tcurdt/jdeb
-                -->
             </extension>
         </extensions>
 
@@ -75,6 +70,11 @@
                 <plugin>
                     <artifactId>jdeb</artifactId>
                     <groupId>org.vafer</groupId>
+                    <version>1.8</version>
+                    <!-- last checked 2019-09-28
+                        https://search.maven.org/search?q=jdeb
+                        https://github.com/tcurdt/jdeb
+                    -->
 
                     <!-- Customize deb package -->
                     <configuration>
