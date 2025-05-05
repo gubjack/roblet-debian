@@ -69,8 +69,8 @@
             <plugin>
                 <artifactId>jdeb</artifactId>
                 <groupId>org.vafer</groupId>
-                <version>1.8</version>
-                <!-- last checked 2019-09-28
+                <version>1.13</version>
+                <!-- last checked 2025-05-05
                     https://search.maven.org/search?q=jdeb
                     https://github.com/tcurdt/jdeb
                 -->
