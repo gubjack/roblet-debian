@@ -63,70 +63,64 @@
             </extension>
         </extensions>
 
-        <pluginManagement>
-            <plugins>
-
-                <!-- jdeb configuration -->
-                <plugin>
-                    <artifactId>jdeb</artifactId>
-                    <groupId>org.vafer</groupId>
-                    <version>1.8</version>
-                    <!-- last checked 2019-09-28
-                        https://search.maven.org/search?q=jdeb
-                        https://github.com/tcurdt/jdeb
-                    -->
-
-                    <!-- Customize deb package -->
-                    <configuration>
-
-                        <deb>target/roblet_[[package.version]]_all.deb</deb>
-
-                        <dataSet>
-
-                            <!-- /etc/roblet/ -->
-                            <data>
-                                <type>template</type>
-                                <paths>
-                                    <path>/etc/roblet</path>
-                                </paths>
-                            </data>
-
-                            <!-- /opt/roblet/roblet -->
-                            <data>
-                                <src>src/deb/roblet</src>
-                                <type>file</type>
-                                <mapper>
-                                    <type>perm</type>
-                                    <prefix>/opt/roblet</prefix>
-                                    <filemode>755</filemode>
-                                </mapper>
-                            </data>
-
-                            <!-- /opt/roblet/roblet.service -->
-                            <data>
-                                <src>src/deb/roblet.service</src>
-                                <type>file</type>
-                                <dst>/opt/roblet/roblet.service</dst>
-                            </data>
-
-                            <!-- /opt/roblet/*.jar -->
-                            <data>
-                                <src>target/dependency</src>
-                                <type>directory</type>
-                                <mapper>
-                                    <type>perm</type>
-                                    <prefix>/opt/roblet</prefix>
-                                </mapper>
-                            </data>
-
-                        </dataSet>
-                    </configuration>
-                </plugin>
-
-            </plugins>
-        </pluginManagement>
-
         <plugins>
+
+            <!-- jdeb configuration -->
+            <plugin>
+                <artifactId>jdeb</artifactId>
+                <groupId>org.vafer</groupId>
+                <version>1.8</version>
+                <!-- last checked 2019-09-28
+                    https://search.maven.org/search?q=jdeb
+                    https://github.com/tcurdt/jdeb
+                -->
+
+                <!-- Customize deb package -->
+                <configuration>
+
+                    <deb>target/roblet_[[package.version]]_all.deb</deb>
+
+                    <dataSet>
+
+                        <!-- /etc/roblet/ -->
+                        <data>
+                            <type>template</type>
+                            <paths>
+                                <path>/etc/roblet</path>
+                            </paths>
+                        </data>
+
+                        <!-- /opt/roblet/roblet -->
+                        <data>
+                            <src>src/deb/roblet</src>
+                            <type>file</type>
+                            <mapper>
+                                <type>perm</type>
+                                <prefix>/opt/roblet</prefix>
+                                <filemode>755</filemode>
+                            </mapper>
+                        </data>
+
+                        <!-- /opt/roblet/roblet.service -->
+                        <data>
+                            <src>src/deb/roblet.service</src>
+                            <type>file</type>
+                            <dst>/opt/roblet/roblet.service</dst>
+                        </data>
+
+                        <!-- /opt/roblet/*.jar -->
+                        <data>
+                            <src>target/dependency</src>
+                            <type>directory</type>
+                            <mapper>
+                                <type>perm</type>
+                                <prefix>/opt/roblet</prefix>
+                            </mapper>
+                        </data>
+
+                    </dataSet>
+                </configuration>
+            </plugin>
 
             <!-- Apache Maven Dependency Plugin -->
             <plugin>
